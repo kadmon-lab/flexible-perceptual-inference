@@ -1,0 +1,2 @@
+text.latex.preamble: \usepackage{bm}\usepackage{amsmath}
+text.usetex: True

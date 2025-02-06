@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# see https://godatadriven.com/blog/a-practical-guide-to-setuptools-and-pyproject-toml/
+# https://stackoverflow.com/questions/32688688/how-to-write-setup-py-to-include-a-git-repository-as-a-dependency/54701434#54701434
+
+[project]
+name = "enzyme"
+version = "0.1.0"
+authors = [
+    { name="John Schwarcz", email="johnschwarcz@users.noreply.github.com" },
+  { name="Jan Bauer", email="japhba@users.noreply.github.com" },
+]
+description = ""
+
+# name = example
+# version = attr: example.__version__
+# author = You
+# author_email = your@email.address
+# description = Example package description
+# long_description = file: README.md
+# long_description_content_type = text/markdown
+# keywords = example, setuptools
+# license = BSD 3-Clause License
+# classifiers =
+#     License :: OSI Approved :: BSD License
+#     Programming Language :: Python :: 3
+
+dependencies = [
+"matplotlib",
+"seaborn",
+"jupyter",
+"nbmerge",
+"ipympl",
+"skunk",
+"joblib",
+
+"tqdm",
+"scikit-learn",
+"scipy",
+"numpy",
+"pandas",
+# "jax[cuda12_pip]",  # install manually with the cuda12_pip added, depending on whether cuda is available
+"jax-tqdm",
+"flax",
+"equinox",
+
+"numba",
+"numba_progress",
+"torch","torchvision","torchaudio",
+"jumanji==1.0.0",
+"awkward",
+"hydra-core",
+"mat73",
+
+# Comment out if not already installed on disk
+"mplutils@git+https://github.com/japhba/mplutils.git#egg=mplutils",
+# "Stoix@git+https://github.com/japhba/Stoix.git#egg=stoix",  # see README.md for installation instructions, TLDR: pip install -e git+https://github.com/japhba/Stoix.git#egg=stoix and add to vscode search path
+]
+
+
+
+[tool.setuptools.packages]
+find = {}
